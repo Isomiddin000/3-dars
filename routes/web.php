@@ -8,9 +8,10 @@ Route::get('/city/{name}', function ($name) {
 })->name('city.show');
 
 
+
 Route::prefix('admin')->group(function () {
     Route::get('/users/{id}', function ($id) {
-        
+
 
         return "User ID: {$id}";
     })->name('admin.users.show');
@@ -21,10 +22,12 @@ Route::prefix('admin')->group(function () {
 
 Route::prefix('profile')->group(function () {
     Route::get('/view', function () {
+
         return "Profile View";
     })->name('profile.view');
 
     Route::get('/edit', function () {
+
         return "Profile Edit";
     })->name('profile.edit');
 
