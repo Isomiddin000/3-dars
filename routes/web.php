@@ -14,6 +14,8 @@ Route::prefix('admin')->group(function () {
 });
 
 
+
+
 Route::prefix('profile')->group(function () {
     Route::get('/view', function () {
         return "Profile View";
