@@ -3,12 +3,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/city/{name}', function ($name) {
+    
     return "Welcome to {$name}!";
 })->name('city.show');
 
 
 Route::prefix('admin')->group(function () {
     Route::get('/users/{id}', function ($id) {
+
         return "User ID: {$id}";
     })->name('admin.users.show');
 });
